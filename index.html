@@ -12,10 +12,12 @@
     <iframe id="iframe_box" src="./preview.html" frameborder="0"></iframe>
 
     <script>
-    var element = $('#iframe_box').contents().find('#result');
+    $('#iframe_box').on('load', function () {
+      var element = $('#iframe_box').contents().find('#result');
 
-    $(element).on('change', function () {
-      alert(111);
+      $(element).on('change', function () {
+        alert(111);
+      })
     })
     </script>
   </body>
